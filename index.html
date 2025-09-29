@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymRed • Academia Moderna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <!-- Icones (Font Awesome para o whatsapp etc) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">GymRed</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h2>Desperte o melhor de você</h2>
+        <p>Treinos modernos, ambiente motivador e resultados que você vai ver.</p>
+        <a href="#planos" class="btn">Ver Planos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre a GymRed</h2>
+      <p>Com estrutura de ponta, profissionais dedicados e tecnologia para te ajudar em cada passo. Seja para ganhar força, perder peso ou manter a saúde, estamos com você.</p>
+    </div>
+  </section>
+
+  <section id="planos" class="planos">
+    <div class="container">
+      <h2>Nossos Planos</h2>
+      <div class="plano-cards">
+        <div class="card">
+          <h3>Básico</h3>
+          <p class="price">R$ 99/mês</p>
+          <ul>
+            <li>Acesso total à academia</li>
+            <li>Cardio & musculação</li>
+            <li>Sem fidelidade</li>
+          </ul>
+        </div>
+        <div class="card destaque">
+          <h3>Premium</h3>
+          <p class="price">R$ 149/mês</p>
+          <ul>
+            <li>Tudo do Básico</li>
+            <li>Aulas coletivas</li>
+            <li>Treino personalizado</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Black</h3>
+          <p class="price">R$ 199/mês</p>
+          <ul>
+            <li>Personal trainer</li>
+            <li>Consultoria nutricional</li>
+            <li>Benefícios VIP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GymRed. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button id="topBtn" title="Voltar ao topo">↑</button>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=55SEUNUMERO&text=Olá%20GymRed!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20planos." 
+     class="whatsapp-float" target="_blank" aria-label="Chat no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

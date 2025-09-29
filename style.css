@@ -1,0 +1,262 @@
+/* Reset/Tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.5;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #b30000;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  float: left;
+}
+.nav-links {
+  list-style: none;
+  float: right;
+  display: flex;
+  gap: 25px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ffcccc;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1571019613914-85f342c3f709?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out 0.4s;
+}
+.btn {
+  display: inline-block;
+  background: #ff3333;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background: #e60000;
+  transform: translateY(-3px);
+}
+
+/* Seções */
+section {
+  padding: 80px 0;
+}
+.sobre {
+  background-color: #fff;
+}
+.planos {
+  background-color: #f0f0f0;
+}
+.contato {
+  background-color: #fff;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Cards de Planos */
+.plano-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card {
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card.destaque {
+  border: 2px solid #b30000;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.price {
+  font-size: 1.8rem;
+  color: #b30000;
+  margin: 15px 0;
+}
+
+/* Formulário Contato */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+input, textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+input:focus, textarea:focus {
+  border-color: #b30000;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* Botão voltar ao topo */
+#topBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+#topBtn:hover {
+  transform: translateY(-5px);
+}
+
+/* Botão WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: scale(1.1);
+}
+.whatsapp-float i {
+  line-height: 60px;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .nav-links {
+    display: none; /* você pode substituir por menu hamburger se quiser */
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
