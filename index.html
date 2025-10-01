@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GymRed • Academia Moderna</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
-  <!-- Icones (Font Awesome para o whatsapp etc) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="description" content="GymRed: treinos modernos, ambiente motivador e resultados reais. Planos flexíveis e suporte profissional." />
+  <meta name="theme-color" content="#b30000" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">GymRed</h1>
-      <nav>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="GymRed - início">GymRed</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" role="navigation">
         <ul class="nav-links">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#planos">Planos</a></li>
@@ -23,85 +30,142 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-content">
-        <h2>Desperte o melhor de você</h2>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" aria-label="Destaque">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>Desperte o melhor de você</h1>
         <p>Treinos modernos, ambiente motivador e resultados que você vai ver.</p>
-        <a href="#planos" class="btn">Ver Planos</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <h2>Sobre a GymRed</h2>
-      <p>Com estrutura de ponta, profissionais dedicados e tecnologia para te ajudar em cada passo. Seja para ganhar força, perder peso ou manter a saúde, estamos com você.</p>
-    </div>
-  </section>
-
-  <section id="planos" class="planos">
-    <div class="container">
-      <h2>Nossos Planos</h2>
-      <div class="plano-cards">
-        <div class="card">
-          <h3>Básico</h3>
-          <p class="price">R$ 99/mês</p>
-          <ul>
-            <li>Acesso total à academia</li>
-            <li>Cardio & musculação</li>
-            <li>Sem fidelidade</li>
-          </ul>
-        </div>
-        <div class="card destaque">
-          <h3>Premium</h3>
-          <p class="price">R$ 149/mês</p>
-          <ul>
-            <li>Tudo do Básico</li>
-            <li>Aulas coletivas</li>
-            <li>Treino personalizado</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Black</h3>
-          <p class="price">R$ 199/mês</p>
-          <ul>
-            <li>Personal trainer</li>
-            <li>Consultoria nutricional</li>
-            <li>Benefícios VIP</li>
-          </ul>
+        <div class="hero-ctas">
+          <a href="#planos" class="btn btn-primary">Ver Planos</a>
+          <a href="#sobre" class="btn btn-ghost">Conheça a GymRed</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contato" class="contato">
-    <div class="container">
-      <h2>Fale Conosco</h2>
-      <form>
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
+    <section id="sobre" class="sobre">
+      <div class="container grid-2">
+        <div class="sobre-texto">
+          <h2>Sobre a GymRed</h2>
+          <p>Estrutura de ponta, profissionais dedicados e tecnologia para te ajudar em cada passo. Seja para ganhar força, perder peso ou manter a saúde, estamos com você.</p>
+          <ul class="lista-check">
+            <li><i class="fas fa-check"></i> Equipamentos de última geração</li>
+            <li><i class="fas fa-check"></i> Aulas coletivas dinâmicas</li>
+            <li><i class="fas fa-check"></i> Planos flexíveis</li>
+          </ul>
+        </div>
+        <div class="sobre-media">
+          <div class="glass-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Resultados reais</h3>
+            <p>Metodologias validadas e acompanhamento personalizado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
+    <section id="planos" class="planos" aria-labelledby="titulo-planos">
+      <div class="container">
+        <div class="titulo-area">
+          <h2 id="titulo-planos">Nossos Planos</h2>
+          <p class="sub">Escolha o plano ideal para o seu objetivo.</p>
+        </div>
+        <div class="plano-cards">
+          <article class="card">
+            <header>
+              <h3>Básico</h3>
+              <p class="price">R$ 99/mês</p>
+            </header>
+            <ul class="beneficios">
+              <li>Acesso total à academia</li>
+              <li>Cardio & musculação</li>
+              <li>Sem fidelidade</li>
+            </ul>
+            <a href="#contato" class="btn btn-outline" aria-label="Assinar plano Básico">Assinar</a>
+          </article>
+          <article class="card destaque">
+            <header>
+              <div class="badge">Mais Popular</div>
+              <h3>Premium</h3>
+              <p class="price">R$ 149/mês</p>
+            </header>
+            <ul class="beneficios">
+              <li>Tudo do Básico</li>
+              <li>Aulas coletivas</li>
+              <li>Treino personalizado</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary" aria-label="Assinar plano Premium">Assinar</a>
+          </article>
+          <article class="card">
+            <header>
+              <h3>Black</h3>
+              <p class="price">R$ 199/mês</p>
+            </header>
+            <ul class="beneficios">
+              <li>Personal trainer</li>
+              <li>Consultoria nutricional</li>
+              <li>Benefícios VIP</li>
+            </ul>
+            <a href="#contato" class="btn btn-outline" aria-label="Assinar plano Black">Assinar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <form aria-label="Formulário de contato">
+          <label>
+            <span>Seu nome</span>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+          </label>
+          <label>
+            <span>Seu e-mail</span>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+          </label>
+          <label>
+            <span>Sua mensagem</span>
+            <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>&copy; 2025 GymRed. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Botão voltar ao topo -->
-  <button id="topBtn" title="Voltar ao topo">↑</button>
+  <button id="topBtn" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=55SEUNUMERO&text=Olá%20GymRed!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20planos." 
-     class="whatsapp-float" target="_blank" aria-label="Chat no WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://api.whatsapp.com/send?phone=5531993433170&text=Ol%C3%A1%20GymRed!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20planos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat no WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <script src="script.js"></script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+      document.body.classList.toggle('menu-open');
+    });
+
+    const topBtn = document.getElementById('topBtn');
+    const onScroll = () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = 'block';
+      } else {
+        topBtn.style.display = 'none';
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>
